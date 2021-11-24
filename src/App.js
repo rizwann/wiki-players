@@ -9,7 +9,7 @@ function App() {
 const url = 'https://rickandmortyapi.com/api'
 
 const [fetchedData, setFetchedData] = useState([]); 
-const [page, setPage] = useState(4)
+const [page, setPage] = useState(1)
 const {info, results} = fetchedData
 
 console.log(results)
@@ -41,7 +41,7 @@ fetchData()
           </div>
             <div className='col-8 '>
             <div className='row'>
-            <Cards/>
+            <Cards results={results}/>
             </div>
             </div>
   </div>
