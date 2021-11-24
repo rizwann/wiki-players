@@ -1,9 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap/dist/js/bootstrap"
+import "bootstrap/dist/js/bootstrap.js"
 import { useEffect, useState } from "react";
+
+
 import Cards from "./components/Cards/Cards";
 import Filter from './components/Filter/Filter'
-
+import Pagination from './components/Pagination/Pagination'
 
 function App() {
 const url = 'https://rickandmortyapi.com/api'
@@ -12,7 +14,7 @@ const [fetchedData, setFetchedData] = useState([]);
 const [page, setPage] = useState(1)
 const {info, results} = fetchedData
 
-console.log(results)
+// console.log(results)
 let api = `${url}/character/?page=${page}`
 
 
@@ -46,6 +48,7 @@ fetchData()
             </div>
   </div>
   </div>
+  <Pagination setPage={setPage} page={page}/>
     </div>
   );
 }
