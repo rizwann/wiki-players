@@ -53,7 +53,7 @@ fetchData()
             </div>
   </div>
   </div>
-  <Pagination setPage={setPage} page={page}/>
+  <Pagination setPage={setPage} page={page} info={info}/>
     </div>
   );
 }
