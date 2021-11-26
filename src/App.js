@@ -48,6 +48,7 @@ fetchData()
             <div className='col-8 '>
             <div className='row'>
             <Cards results={results}/>
+            
             </div>
             </div>
   </div>
