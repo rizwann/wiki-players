@@ -42,9 +42,9 @@ fetchData()
   <Search setSearch={setSearch} setPage={setPage}/>
       <div className='container'>
         <div className='row'>
-          <div className='col-3'>
+          
             <Filter/>
-          </div>
+       
             <div className='col-8 '>
             <div className='row'>
             <Cards results={results}/>
