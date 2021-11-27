@@ -2,6 +2,7 @@ import React from "react";
 import ReactPaginate from "react-paginate";
 
 const Pagination = ({ info, setPage, page }) => {
+  
   return (
     <ReactPaginate
       className="pagination justify-content-center gap-4 my-4"

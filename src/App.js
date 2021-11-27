@@ -15,11 +15,14 @@ const url = 'https://rickandmortyapi.com/api'
 const [fetchedData, setFetchedData] = useState([]); 
 const [page, setPage] = useState(1)
 const [search, setSearch] = useState('')
+const [status, setStatus] = useState('')
+const [gender, setGender] = useState('')
+const [species, setSpecies]=useState('')
 
 const {info, results} = fetchedData
 
 // console.log(results)
-let api = `${url}/character/?page=${page}&name=${search}`
+let api = `${url}/character/?page=${page}&name=${search}&status=${status}&gender=${gender}&species=${species}`
 
 
 
@@ -43,7 +46,7 @@ fetchData()
       <div className='container'>
         <div className='row'>
           
-            <Filter/>
+            <Filter setStatus={setStatus} setPage={setPage} setGender={setGender} setSpecies={setSpecies}/>
        
             <div className='col-8 '>
             <div className='row'>

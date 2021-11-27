@@ -1,8 +1,8 @@
 import React from 'react'
 import FilterBtn from '../FilterBtn'
 
-const Gender = () => {
-  const genders = ['male', 'female', 'unknown', 'genderless']
+const Gender = ({setPage, setGender}) => {
+  let genders = ['male', 'female', 'unknown', 'genderless']
     return (
         <div className="accordion-item">
     <h2 className="accordion-header" id="headingOne">
@@ -11,9 +11,9 @@ const Gender = () => {
       </button>
     </h2>
     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div className="accordion-body">
+      <div className="accordion-body d-flex flex-wrap gap-3">
        {genders.map((item, index)=>(
-          <FilterBtn key={index} item={item} name="gender"/>
+          <FilterBtn key={index} item={item} name="gender" index={index} setPage={setPage} task={setGender} />
        ))}
       </div>
     </div>

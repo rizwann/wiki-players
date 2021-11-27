@@ -1,10 +1,10 @@
 import React from "react";
 
-const FilterBtn = ({name, index, item}) => {
+const FilterBtn = ({name, index, item, setPage, task}) => {
   return (
     <>
 
-    <style jsx>
+    <style jsx="true">
       {`
       .x:checked + label {
         background-color: #0b5ed7;
@@ -21,8 +21,12 @@ const FilterBtn = ({name, index, item}) => {
           type="radio"
           name={name}
           id={`${name}${index}`}
+          onClick={() => {setPage(1)
+             task(item)
+            console.log(item)
+            }}
         />
-        <label class="btn btn-outline-primary" for={`${name}${index}`}>
+        <label className="btn btn-outline-primary" htmlFor={`${name}${index}`}>
           {item}
         </label>
       </div>
