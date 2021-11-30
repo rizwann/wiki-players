@@ -6,7 +6,7 @@ const Location = () => {
   const [info, setInfo] = useState([]);
   const [id, setId] = useState(1);
   const [results, setResults] = useState([]);
-  const { type, name } = info;
+  const { type, name, dimension } = info;
 
   let apiUrl = `https://rickandmortyapi.com/api/location/${id}`;
 
@@ -35,8 +35,12 @@ const Location = () => {
           <span className="text-primary">{name === "" ? "Unknown" : name}</span>
         </h1>
         <h5 className="text-center">
-          Type : {type === "" ? "Unknown" : type}
+        Dimension : {dimension === "" ? "Unknown" : dimension}
         </h5>
+        <h6 className="text-center">
+          Type : {type === "" ? "Unknown" : type}
+         
+        </h6>
       </div>
       <div className="row">
         <div className="col-3">
@@ -48,7 +52,7 @@ const Location = () => {
 
         <div className="col-8">
           <div className="row">
-            <Cards results={results} />
+            <Cards page="/episodes/" results={results} />
           </div>
         </div>
       </div>

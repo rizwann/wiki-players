@@ -10,6 +10,7 @@ import Search from "./components/Search/Search";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Episodes from "./pages/Episodes";
 import Location from "./pages/Location";
+import CardDetails from "./components/Cards/CardDetails";
 
 function App(){
   return(
@@ -21,6 +22,9 @@ function App(){
         <Route path="/" element={<Home />} />
         <Route path="/episodes" element={<Episodes />} />
         <Route path="/location" element={<Location />} />
+        <Route path="/episodes/:id" element={<CardDetails />} />
+        <Route path="/location/:id" element={<CardDetails />} />
+        <Route path="/:id" element={<CardDetails />} />
       </Routes>
     </Router>
   )
@@ -53,8 +57,8 @@ const Home = () => {
   return (
     <div className="App">
      
-
-      <Search setSearch={setSearch} setPage={setPage} />
+<h1 className="text-center mb-4">Characters</h1>
+ <Search setSearch={setSearch} setPage={setPage} ph="Search by the character name"/>
       <div className="container">
         <div className="row">
           <Filter
@@ -66,7 +70,7 @@ const Home = () => {
 
           <div className="col-8 ">
             <div className="row">
-              <Cards results={results} />
+              <Cards results={results} page="/"/>
             </div>
           </div>
         </div>
