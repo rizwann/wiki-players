@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import styles from "./Cards.module.scss";
+
 
 const CardDetails = () => {
   const { id } = useParams();
