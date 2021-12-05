@@ -12,7 +12,7 @@ import Episodes from "./pages/Episodes";
 import Location from "./pages/Location";
 
 import CardDetails from "./components/Cards/CardDetails";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 
 function App(){
   return(
