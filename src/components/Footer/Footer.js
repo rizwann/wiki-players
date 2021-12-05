@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="container text-center mt-5 ">
             <br/>
-           <p className="text-muted">Made with 💖 from Rizwan  ⌛ {new Date().getFullYear()} ⌛ </p>
+           <p className="text-muted">Made with 💖 from Rizwan K.  ⌛ {new Date().getFullYear()} ⌛ </p>
         </div>
     )
 }
