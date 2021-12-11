@@ -9,4 +9,10 @@ Live: https://rick-und-morty.netlify.app/
 
 
 
-API used: https://rickandmortyapi.com/api
+
+
+
+
+
+
+Powered by: https://rickandmortyapi.com/api
